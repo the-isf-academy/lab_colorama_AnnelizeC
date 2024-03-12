@@ -15,10 +15,11 @@ def home_view(request):
     "A view function which renders the homepage"
 
     skyblue = Color(name="skyblue", red=135, green=206, blue=250)
+    lavender = Color(name="lavender",red = 230, green= 230, blue = 250)
 
     params = {
-        "name": "stranger",
-        "color": skyblue,
+        "name": "annelize",
+        "color": lavender,
     }
     
     response = render(request, 'color_app/index.html', params)

@@ -38,6 +38,7 @@ class Color(models.Model):
         h, s, v  = self.to_hsv()
         r, g, b = hsv_to_rgb(h + delta % 1, s, v)
         return Color(name=name, red=int(r*255), green=int(g*255), blue=int(b*255))
+        red_hue = red.adjust_hue(0.5, name="red hue")
 
     def adjust_saturation(self, delta, name=''):
         "Adjust the saturation of the color by `delta`."

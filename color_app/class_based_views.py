@@ -6,7 +6,7 @@ from color_app.forms import ColorForm
 class ColorListView(ListView):
     model = Color
     template_name = "color_app/color_list.html"
-    queryset = Color.objects.order_by("name")
+    queryset = Color.objects.order_by("red")
 
 class NewColorView(CreateView):
     model = Color
